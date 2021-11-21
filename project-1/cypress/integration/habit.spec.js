@@ -13,7 +13,7 @@ describe("habit dashboard", () => {
         .contains("Save Changes")
         .should('be.visible')
         cy.contains("button", "Close")
-        cy.get(".modal-footer").find("button").contains("CloseX")
+        cy.get(".modal-footer").find("button").contains("Close")
     })
 
     it("should display habit card when new habit is added", () => {
