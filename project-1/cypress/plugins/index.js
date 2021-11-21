@@ -1,4 +1,4 @@
- <reference types="cypress" />
+ //<reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -17,14 +17,8 @@
  */
  const {commitInfo} = require('@cypress/commit-info')
  // default folder is current working directory
- commitInfo(folder)
-   .then(info => {
-     // info object will have properties
-     branch,
-     message,
-     // email
-     author
-     // sha
-     // timestamp (in seconds since epoch)
-     // remote
-   })
+ module.exports = on => {
+  on('file:preprocessor', file => {
+    commitInfo().then(console.log);
+  });
+};
