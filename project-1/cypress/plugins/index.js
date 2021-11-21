@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+ <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -15,8 +15,16 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-}
+ const {commitInfo} = require('@cypress/commit-info')
+ // default folder is current working directory
+ commitInfo(folder)
+   .then(info => {
+     // info object will have properties
+     branch,
+     message,
+     // email
+     author
+     // sha
+     // timestamp (in seconds since epoch)
+     // remote
+   })
