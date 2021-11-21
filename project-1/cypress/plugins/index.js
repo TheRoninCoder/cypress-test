@@ -19,6 +19,6 @@
  // default folder is current working directory
  module.exports = on => {
   on('file:preprocessor', file => {
-    commitInfo().then(console.log);
+    commitInfo().then("branch", "message");
   });
 };
