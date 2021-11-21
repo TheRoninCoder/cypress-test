@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-21T14:57:44.417Z",
+    "end": "2021-11-21T14:57:45.468Z",
+    "duration": 1051,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "212746c4-bbfd-4cba-b80d-80f1c9ebb55b",
+      "title": "",
+      "fullFile": "cypress/integration/locators.spec.js",
+      "file": "cypress/integration/locators.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6bc9c3de-a249-4908-b0ca-a1c6f0b763de",
+          "title": "Locators",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "locating elements with get",
+              "fullTitle": "Locators locating elements with get",
+              "timedOut": null,
+              "duration": 674,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Get all elements by tag name\ncy.get(\"button\"); // Get all elements by className\ncy.get(\".btn-with-class\"); // Get all elements by className\ncy.get(\"#btn-with-id\"); // Get all elements with specific classes\ncy.get(\"[class='Elements-btn btn-with-class']\");\ncy.get(\"[class='Elements-btn btn-with-class more-btn-classes']\"); // Get all elements by specific attribute\ncy.get(\"[type='submit']\"); // Get all elements by tag name AND class\ncy.get(\"button.btn-with-class\"); // Get all elements by tag name AND class and id \ncy.get(\"button.Elements-btn#btn-with-id\"); // Get all elements by tag name AND class and type attribute\ncy.get(\"button.Elements-btn[type='submit']\"); // Get all elements with specific data test id\ncy.get(\"[data-cy='btn-id-1']\");",
+              "err": {},
+              "uuid": "0c1a230e-e85a-46b4-8ab1-118cf32be990",
+              "parentUUID": "6bc9c3de-a249-4908-b0ca-a1c6f0b763de",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "locating elements with contain",
+              "fullTitle": "Locators locating elements with contain",
+              "timedOut": null,
+              "duration": 141,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Get element by text\ncy.contains(\"Unique Text\"); // Get element by text\ncy.contains(\"Not Unique Text\"); // Combine get with contains\ncy.get(\"[type='submit']\").contains(\"Not Unique Text\"); // Get element by tag name and text\ncy.contains(\"[type='submit']\", \"Not Unique Text\"); // Get element by descent and text \ncy.contains(\"span\", \"Not Unique Text\");\ncy.contains(\"form\", \"Not Unique Text\");\ncy.get(\"form\").contains(\"Not Unique Text\");",
+              "err": {},
+              "uuid": "fe79f01b-f4e6-4831-bf55-66be53dbf06e",
+              "parentUUID": "6bc9c3de-a249-4908-b0ca-a1c6f0b763de",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "locating elements with find",
+              "fullTitle": "Locators locating elements with find",
+              "timedOut": null,
+              "duration": 88,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#form-1\").find(\".btn-1\");",
+              "err": {},
+              "uuid": "716bfa0d-1b4e-424c-88e6-9359e7f62ed8",
+              "parentUUID": "6bc9c3de-a249-4908-b0ca-a1c6f0b763de",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "locating elements with custom commands",
+              "fullTitle": "Locators locating elements with custom commands",
+              "timedOut": null,
+              "duration": 117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Get all elements by tag\ncy.getByTag(\"button\");",
+              "err": {},
+              "uuid": "524bf858-f03b-4fa1-94e4-3f4d3554fa2a",
+              "parentUUID": "6bc9c3de-a249-4908-b0ca-a1c6f0b763de",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c1a230e-e85a-46b4-8ab1-118cf32be990",
+            "fe79f01b-f4e6-4831-bf55-66be53dbf06e",
+            "716bfa0d-1b4e-424c-88e6-9359e7f62ed8",
+            "524bf858-f03b-4fa1-94e4-3f4d3554fa2a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1020,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}
