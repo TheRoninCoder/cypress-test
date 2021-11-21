@@ -9,6 +9,11 @@ describe("habit dashboard", () => {
     it("should display modal when add button is clicked", () => {
         cy.contains("button", "Add").click()
         cy.contains("Add a new habit").should("be.visible")
+        cy
+        .contains("Save Changes")
+        .should('be.visible')
+        cy.contains("button", "Close")
+        cy.get(".modal-footer").find("button").contains("Close")
     })
 
     it("should display habit card when new habit is added", () => {
