@@ -7,7 +7,7 @@ describe("habit dashboard", () => {
     })
 
     it("should display modal when add button is clicked", () => {
-        cy.contains("button", "AddIt").click()
+        cy.contains("button", "Add").click()
         cy.contains("Add a new habit").should("be.visible")
     })
 
