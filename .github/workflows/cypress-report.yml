@@ -12,8 +12,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   cypress-test:
-    name: Run on Chrome 95
-    runs-on: ubuntu-18.04
+    name: Runs on chrome 94
+    runs-on: ubuntu-20.04
     container: cypress/browsers:node16.5.0-chrome94-ff93
     steps:
       - uses: actions/checkout@v2
