@@ -1,45 +1,17 @@
-# This is a basic workflow to help you get started with Actions
+name: Cypress Tests
 
-name: Generate Cypress Report
+on: [push]
 
-# Controls when the workflow will run 
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch 
-  push:
-    branches:
-      - 'main'
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  cypress-test:
-    name: Runs on chrome 94
-    runs-on: ubuntu-20.04
-    container: cypress/browsers:node16.5.0-chrome94-ff93
+  cypress-run:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      
-      - name: Install Cypress and verify
-        run:
-          npm ci
-          $(npm bin)/cypress verify
-      
-      - name: Run Cypress tests
-        run: npm run test:chrome
-        continue-on-error: false
-        
-      - name: Copy test execution videos
-        run:
-          mkdir public
-          cp -r cypress/videos public/videos
-          
-      - name: Merge test reports
-        run: npm run combine:report
-        
-      - name: Generate HTML report
-        run: npm generate:report
-      
-      - name: Deploy report page to Github page
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          build: npm run build
+          start: npm start
